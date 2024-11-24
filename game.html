@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stake Mines</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    <div class="result">
+        <div class="betAmount">
+            <label for="betMoney">Bet Amount</label>
+            <div id="bettingMoney" onclick="betAmountMax()">
+            <span>₹</span><input type="number" value="0.00" min="0.00" name="betMoney" id="betMoney" step="0.01">
+            </div>
+        </div>
+        <div class="profitCon">
+            <h4>Total profit <span id="betMultiplier"></span></h4>
+            <div id="totalProfitCon"><span>₹</span><span id="totalProfit">0.00</span></div>
+        </div>
+        <div class="mineCon">
+        <label for="mines">Mines</label>
+            <!-- <input type="number" name="mines" value="1" min="1" max="24" step="1" id="mines"> -->
+            
+            <select name="mines" id="mines">
+            </select>
+            
+            <button id="betBtn">Bet</button>
+        </div>
+        <button id="resetBtn">Cashout</button>
+    </div>
+    <div class="container">
+        <div class="totalAmount"><span>₹</span><input type="number" value="500" id="totalMoney" disabled></div>
+        <div class="boxCon"></div>
+    </div>
+</body>
+<!-- <script src="game.js"></script> -->
+<script src="money.js"></script>
+</html>

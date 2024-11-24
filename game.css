@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    width: 100vw;
+    height: 100vh;
+    background: #1d2b3b;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.totalAmount{
+    font-size: 2rem;
+    font-family: sans-serif;
+    color: #f0f8ff;
+    width: 6rem;
+    display: flex;
+}
+#totalMoney{
+    font-size: 2rem;
+    color: #f0f8ff;
+    background: none;
+    border: none;
+}
+.boxCon{
+    width: 38rem;
+    height: 38rem;
+    background: #122031;
+    display: flex;
+    align-content:space-evenly;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    border-radius: 0.5rem;
+}
+.box{
+    width: 7rem;
+    height: 7rem;
+    background: #324457;
+    border: none;
+    border-radius: 0.5rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90% 90%;
+    box-shadow: inset 0px -8px #213344;
+}
+.boxHover:hover{
+    position: relative;
+    bottom: 0.2rem;
+    background-color: #4c627b;
+}
+
+.boxAnimation{
+    animation: boxAnimate 0.6s;
+    animation-iteration-count: 1;
+}
+
+@keyframes boxAnimate {
+    0%{
+        scale: 1;
+    }
+    33%{
+        scale: 0.9;
+    }
+    66%{
+        scale: 1.1;
+    }
+    100%{
+        scale: 1;
+    }
+}
+
+.bgAnimation{
+    animation: bgAnimate 0.3s;
+    animation-iteration-count: 1;
+}
+
+@keyframes bgAnimate {
+    0%{
+        background-size: 0% 0%;
+    }
+    100%{
+        background-size: 90% 90%;
+    }
+}
+
+.boxRevealed{
+    background-size: 68% 68%;
+}
+.boxRevealed::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #0b1727;
+    opacity: 0.72;
+    border-radius: inherit;
+}
+
+#resetBtn{
+    font-size: 1rem;
+    color: #111;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border: none;
+    border-radius: 0.2rem;
+    width: 100%;
+    background: #00f800;
+}
+#resetBtn:active{
+    scale: 0.96;
+}
+
+.result{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 38rem;
+    min-width: 18rem;
+    background: #213344;
+    border-radius: 0.5rem;
+    padding: 1rem;
+}
+.mineCon{
+    font-size: 1.6rem;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.mineCon #mines{
+    font-size: 1rem;
+    color: #f0f8ff;
+    padding: 0.5rem;
+    border: solid 2px #324457;
+    border-radius: 0.2rem;
+    margin: 0.1rem 0;
+    background: #0b1727;
+    outline: none;
+}
+.mineCon #mines:hover{
+    border-color: #455c74;
+}
+
+.mineCon #betBtn{
+    font-size: 1rem;
+    color: #111;
+    padding: 0.8rem;
+    background: #00f800;
+    border: none;
+    border-radius: 0.2rem;
+    margin: 1rem 0;
+}
+.mineCon #betBtn:hover{
+    background-color: #00ff00;
+}
+.mineCon #betBtn:active{
+    scale: 0.96;
+}
+.result label{
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    color: #b3b5d7;
+}
+
+
+/* Betting Money */
+
+.betAmount{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 1rem 0;
+}
+#bettingMoney{
+    width: 100%;
+    padding: 0 0 0 0.5rem;
+    border: solid 2px #324457;
+    border-radius: 0.2rem;
+    margin: 0.1rem 0;
+    background: #0b1727;
+    display: flex;
+    align-items: center;
+}
+#bettingMoney span{
+    font-size: 1.2rem;
+    color: #fff;
+    width: auto;
+}
+#betMoney{
+    width: 100%;
+    font-size: 1.2rem;
+    color: #f0f8ff;
+    background: none;
+    padding: 0.5rem;
+    border: none;
+    outline: none;
+}
+
+/* Total amount */
+
+.totalAmount{
+    margin: 1rem;
+}
+
+/* Total Profit */
+.profitCon{
+    font-size: 1rem;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.profitCon h4{
+    color: #f0f8ff;
+}
+.profitCon #totalProfitCon{
+    font-size: 1.2rem;
+    color: #f0f8ff;
+    padding: 0.5rem;
+    border: solid 2px #324457;
+    border-radius: 0.2rem;
+    margin: 0.1rem 0;
+    background: #0b1727;
+    outline: none;
+}
